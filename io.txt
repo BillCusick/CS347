@@ -1,0 +1,189 @@
+So far, all input for these are done via command line.
+
+*****************************************************************************************
+
+receipt.exe
+input: 50
+output: 
+*********************************                              
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*         Point Value          *
+*              50              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+********************************
+
+input: 500
+output: 
+*********************************
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*         Point Value          *
+*             500             *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+*                              *
+********************************
+
+input: 5000000000000000000000000
+output: Point value too high!
+
+*****************************************************************************************
+
+tallier.exe
+
+input: 20
+input: 1
+output: This transaction has earned 138.456213 points.
+Please enter a point value
+
+input: 1
+input: 50
+output: This transaction has earned 346.140533 points.
+Please enter a point value
+
+input: 1.12
+input: 1.234523
+output: This transaction has earned 8.546369 points.
+Please enter a point value
+
+
+input: aaa
+output: Invalid point value entered
+Please enter a point value
+
+input: 6
+input: hello!
+output: Invalid bin weight entered
+Please enter a point value
+
+input: 123456789098
+output: Invalid point value entered
+Please enter a point value
+
+input: 5
+input: 18146
+output: 
+This transaction has earned 628106.611284 points.
+Please replace bin
+
+input: 123
+input: 987654321987
+output: This transaction has earned 840993295980623.000000 points.
+Please replace bin
+
+*****************************************************************************************
+user.exe
+
+input: 4
+output: 
+********************************
+*     Your Current Points:     *
+*              4              *
+********************************
+
+
+input: 12345678987654323456
+output:
+********************************
+*     Your Current Points:     *
+*     12345678987654323456     *
+********************************
+
+
+input: 12345678985432123456787654321234567
+output: Point value too high!
+
+
+*****************************************************************************************
+worker.exe
+
+Please enter input
+input: set
+input: blue,42
+output: The value pair blue, 42 has been stored.
+
+Please enter input
+input: set
+input: red,27
+output: The value pair red, 27 has been stored.
+
+Please enter input
+input: set
+input: cancel
+output: cancelling...
+
+Please enter input
+input: AAAAAAAAAAAAAAAAA
+output: Please enter input
+
+input: set
+input: %1000A, 1
+output: The color name is too long.
+
+Please enter input
+input: set
+input: where am i?
+output: Improperly formatted input
+
+Please enter input
+input: set
+input: [On storing >60 entries]
+output: The database is full. Please delete items.
+
+Please enter input
+input: delete
+input: blue
+output: Deleted the color from database.
+
+Please enter input
+input: exit
+output: Exiting Worker Interface...
