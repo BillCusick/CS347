@@ -16,10 +16,15 @@ RM = rm -f
 
 all: worker user receipt weigh tallier
 worker: $(OBJ1)
+	cc $(OBJ1) -o worker
 user: $(OBJ2)
+	cc $(OBJ2) -o user
 receipt: $(OBJ3)
+	cc $(OBJ3) -o receipt
 weigh: $(OBJ4)
+	cc $(OBJ4) -o weigh
 tallier: $(OBJ5)
+	cc $(OBJ5) -o tallier
 clean:
 	-$(RM) *~
 	-$(RM) *.o
