@@ -14,4 +14,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+int find_open(int*);
+int find_color(char*, char**);
+
 #endif

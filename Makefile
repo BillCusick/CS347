@@ -2,7 +2,7 @@
 #Makefile for the ticket executables
 #I pledge my honor that I have abided by the Stevens Honor System
 
-WORKER = worker_interface.c
+WORKER = worker_interface.c find_open.c find_color.c
 USER = user_interface.c
 RECEIPT = receipt_printer.c
 WEIGH = weigh_bin.c
