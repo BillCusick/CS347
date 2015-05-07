@@ -1,8 +1,13 @@
 So far, all input for these are done via command line.
 
-*****************************************************************************************
+The source files can all be recompiled into executables with the 'make' command
 
-receipt.exe
+The name of each executable corresponding to the tests is provided with each segment. The
+programs can all be run with ./executableName
+
+*****************************************************************************************
+Executable: receipt
+
 input: 50
 output: 
 *********************************                              
@@ -77,8 +82,7 @@ input: 5000000000000000000000000
 output: Point value too high!
 
 *****************************************************************************************
-
-tallier.exe
+Executable: tallier
 
 input: 20
 input: 1
@@ -121,7 +125,7 @@ output: This transaction has earned 840993295980623.000000 points.
 Please replace bin
 
 *****************************************************************************************
-user.exe
+Executable: user
 
 input: 4
 output: 
@@ -144,46 +148,68 @@ output: Point value too high!
 
 
 *****************************************************************************************
-worker.exe
+Executable: worker
 
+Welcome to the Worker Interface. Here are the commands:
+'Exit' to leave the program.
+'Set' followed by 'color,number' to set a color-value pair
+'Delete' followed by 'color' to remove a value
+'Show' to display the current color-value pairs
+'Commands' to see this list reprinted
 Please enter input
+
 input: set
 input: blue,42
 output: The value pair blue, 42 has been stored.
 
-Please enter input
 input: set
 input: red,27
 output: The value pair red, 27 has been stored.
 
-Please enter input
+input: set
+input: purple,            30
+output: The value pair purple, 30 has been stored.
+
 input: set
 input: cancel
 output: cancelling...
 
-Please enter input
 input: AAAAAAAAAAAAAAAAA
-output: Please enter input
+output: Error: Command not recognized
 
 input: set
 input: %1000A, 1
-output: The color name is too long.
+output: Error: The color name is too long.
 
-Please enter input
 input: set
 input: where am i?
-output: Improperly formatted input
+output: Error: Improperly formatted input
 
-Please enter input
 input: set
 input: [On storing >60 entries]
-output: The database is full. Please delete items.
+output: Error: The database is full. Please delete items.
 
-Please enter input
 input: delete
 input: blue
-output: Deleted the color from database.
+output: [If the color is in database] The value pair blue, 42 has been deleted
 
-Please enter input
+input: delete
+input: blue
+output: [If the color is not in database] Error: Could not find specified color.
+
+input: show
+output: [For all color, value pairs, if array contains items] The value pair color, value is in the array\n
+
+input: show
+output: [For all color, value pairs, if array contains no items] There are no values stored.
+
+input: commands
+output: 
+'Exit' to leave the program.
+'Set' followed by 'color,number' to set a color-value pair
+'Delete' followed by 'color' to remove a value
+'Show' to display the current color-value pairs
+'Commands' to see this list reprinted
+
 input: exit
 output: Exiting Worker Interface...
